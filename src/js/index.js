@@ -3,6 +3,7 @@
 const popup = document.querySelector(".popup"),
       openPopup = document.getElementById("show-popup-form"),
       closePopup = document.querySelector(".close-popup"),
+      successMess = document.getElementById("show-success-mess"),
       btnForm = document.querySelector(".btn-form");
 
 openPopup.onclick = () => {
@@ -24,11 +25,16 @@ const popupBox = () => {
 };
 
 btnForm.onclick = () => {
-      if(validate() === false) {
-        validate();
-      }
-
-      openPopup.classList.add("hide");
+  if(validate() === false ){
+   validate();
+  } else {
+   setInterval(function sumbitForm() {
+       popup.classList.remove("open");
+     }, 3000);
+   
+     openPopup.classList.add("hide");
+     successMess.classList.remove("hide");
+  }
 
 };
 
