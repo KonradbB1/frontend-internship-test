@@ -113,10 +113,10 @@ body {
       label::after {
         content: "";
         display: inline-block;
-        height: 6px;
+        height: 4px;
         width: 14px;
-        border-left: 2px solid;
-        border-bottom: 2px solid;
+        border-left: 4px solid;
+        border-bottom: 4px solid;
         transform: rotate(-45deg);
         margin-left: -20px;
       }
@@ -163,6 +163,11 @@ body {
         background-color: $black-color;
         color: $secondary-color;
         text-transform: uppercase;
+        border: none;
+      }
+
+      .btn-form:hover {
+        background-color: $primary-color;
         border: none;
       }
     }
